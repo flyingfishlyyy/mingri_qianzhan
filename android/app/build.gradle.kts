@@ -9,11 +9,16 @@ android {
     namespace = "com.example.flutter_application_1"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
-    compileSdkVersion 34  
+    ompileSdk = 34  
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
-        coreLibraryDesugaringEnabled true
+        isCoreLibraryDesugaringEnabled = true
+    }
+    dependencies {
+    // 添加下面这一行 ↓↓↓
+     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")
+    // ... 其他依赖
     }
 
     kotlinOptions {
